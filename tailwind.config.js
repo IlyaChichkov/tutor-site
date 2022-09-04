@@ -1,16 +1,19 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
-        './src/**/*.{js,ts,tsx,jsx,css}'
+        './src/**/*.{js,ts,tsx,jsx,css,scss}'
     ],
     theme: {
         extend: {
             colors: {
                 'page-white': '#E6F0FD',
-                'text-black': '#070B2D',
-                'text-title': '#3847CC',
+                'textMain': '#070B2D',
+                'textTitle': '#3847CC',
                 'main': '#5667FA',
                 'secondary': '#9BC9FF',
+                'gd-section-100': '#8EDDFF',
+                'gd-section-200': '#83BCFF',
+                'gd-section-300': '#6AC5F8',
             },
         },
         fontFamily: {

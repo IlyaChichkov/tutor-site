@@ -1,7 +1,8 @@
-import { configureStore } from '@reduxjs/toolkit'
+import {configureStore, createSlice} from '@reduxjs/toolkit'
+import deviceSlice from "./deviceSlice";
 
 export default configureStore({
     reducer: {
-        isMobile: false
+        device: deviceSlice,
     }
 })

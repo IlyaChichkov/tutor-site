@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&family=Roboto+Mono:wght@400;500;700&family=Roboto:wght@400;500;700&family=Rubik:wght@400;500;600;700&display=swap');
 
 body {
-  @apply font-raleway bg-page-white;
+  @apply font-raleway bg-page-white text-textMain;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -27,4 +27,17 @@ a{
 a:visited{
   appearance: none;
   -webkit-appearance: none;
+}
+
+button.main{
+  @apply bg-main px-4 py-4 text-white rounded-md font-bold text-center;
+  transition: all 90ms ease-in-out;
+}
+
+button.main:hover{
+  @apply brightness-110;
+}
+
+button.main:active{
+  @apply opacity-90;
 }

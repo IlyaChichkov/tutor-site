@@ -1,0 +1,47 @@
+.spoiler{
+  @apply p-2 py-4;
+  transition: all 2s ease-out;
+}
+
+.spoiler-top{
+  @apply flex flex-row items-center;
+
+  &:hover>.spoiler-label{
+    @apply text-main;
+  }
+  &:active>.spoiler-label{
+    @apply brightness-125;
+  }
+}
+
+.spoiler-icon{
+}
+
+.spoiler-icon-closed{
+  transition: all 200ms ease-out;
+  transform: rotate(0deg);
+}
+
+.spoiler-icon-opened{
+  transition: all 200ms ease-in;
+  transform: rotate(90deg);
+}
+
+.spoiler-data{
+  @apply mt-4 ml-8;
+}
+
+.item-enter {
+  opacity: 0;
+}
+.item-enter-active {
+  opacity: 1;
+  transition: opacity 210ms ease-in;
+}
+.item-exit {
+  opacity: 1;
+}
+.item-exit-active {
+  opacity: 0;
+  transition: opacity 210ms ease-in;
+}

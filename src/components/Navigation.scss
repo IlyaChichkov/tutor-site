@@ -1,0 +1,12 @@
+
+.nav{
+    @apply fixed top-0 w-full z-20;
+
+    .mob-menu-i{
+        @apply py-1 my-1 tracking-wider font-raleway font-medium;
+    }
+
+    .mobile-menu{
+        @apply absolute flex flex-col justify-center w-full bg-white h-auto;
+    }
+}

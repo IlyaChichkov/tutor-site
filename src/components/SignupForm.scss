@@ -1,0 +1,30 @@
+
+.signup-form{
+  @apply w-full max-w-[92%] md:max-w-[80%] mx-auto;
+
+  label{
+    @apply flex flex-col  mb-3 font-bold;
+  }
+
+  select{
+    @apply mt-2 p-3 px-4 bg-none border-solid border-main border-2 rounded-lg;
+
+    &:focus-visible{
+      @apply outline-none;
+    }
+  }
+
+  input{
+    @apply font-rb py-1 mt-1 bg-transparent border-solid border-main border-b-2 font-normal;
+
+    &:hover{
+      @apply border-secondary;
+    }
+    &:active{
+      @apply opacity-95;
+    }
+    &:focus-visible{
+      @apply outline-none;
+    }
+  }
+}
