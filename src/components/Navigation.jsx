@@ -17,9 +17,13 @@ function Navigation() {
     const dispatch = useDispatch();
     const [isMobileMenu, setMobileMenu] = useState(false);
 
+    const closeMenu = () => {
+        setMobileMenu(false);
+    }
+    const navClass = isMobile? 'fixed top-0': 'absolute top-[-150px]';
     useEffect(() => {
         const resizeListener = () => {
-            if(getWidth() > 575){
+            if(getWidth() > 765){
                 setMobile(false);
                 dispatch(toggleMobile(false));
             }else{
@@ -41,53 +45,69 @@ function Navigation() {
     }, [isMobile])
 
     return (
-        <div className={'nav'}>
-            {/*Mobile Nav*/}
-            <div className={'bg-white shadow-md shadow-secondary'}>
-                <div className={'flex flex-row justify-between items-center py-4'}>
-                    {/*Branding*/}
-                    <a href={'#'} className={'flex flex-row items-center ml-6'}>
-                        <BookIcon/>
-                        <p className={'text-2xl font-bold ml-2 font-rbMono select-none'}>Sophia<br/>Tutor</p>
-                    </a>
-                    {/*Menu Button*/}
-                    <div className={'mr-6 p-2'} onClick={() => {setMobileMenu(!isMobileMenu)}}>
-                        <MenuIcon/>
-                    </div>
-                </div>
-                {/*Mobile Menu*/}
-                <CSSTransition in={isMobileMenu}
-                               timeout={300}
-                               classNames="item"
-                               unmountOnExit>
-                    <div className={'mobile-menu'}>
-                        {/*Links*/}
-                        <hr/>
-                        <div className={'flex flex-col text-center py-4'}>
-                            <a className={'mob-menu-i'} href={'#about-me'}>Обо мне</a>
-                            <a className={'mob-menu-i'} href={'#my-services'}>Услуги</a>
-                            <a className={'mob-menu-i'} href={'#questions'}>Вопросы</a>
-                            <a className={'mob-menu-i-special'} href={'#signup-form'}>Записаться</a>
+        <div className={'nav ' + navClass}>
+            {isMobile?
+                <div className={'bg-white shadow-md shadow-secondary'}>
+                    {/*Mobile Nav*/}
+                    <div className={'flex flex-row justify-between items-center py-4'}>
+                        {/*Branding*/}
+                        <a href={'#'} className={'flex flex-row items-center ml-6'}>
+                            <BookIcon/>
+                            <p className={'text-2xl font-bold ml-2 font-rbMono select-none'}>Sophia<br/>Tutor</p>
+                        </a>
+                        {/*Menu Button*/}
+                        <div className={'mr-6 p-2'} onClick={() => {setMobileMenu(!isMobileMenu)}}>
+                            <MenuIcon/>
                         </div>
-                        <hr/>
-                        {/*Socials*/}
-                        <div className={'flex flex-col items-center py-4'}>
-                            <div className={'flex flex-row justify-between w-[100px]'}>
-                                <a className={'social-icon'} href={'#'}>
-                                    <WhatsAppIcon/>
-                                </a>
-                                <a className={'social-icon'} href={'#'}>
-                                    <TelegramIcon/>
-                                </a>
+                    </div>
+                    {/*Mobile Menu*/}
+                    <CSSTransition in={isMobileMenu}
+                                   timeout={300}
+                                   classNames="item"
+                                   unmountOnExit>
+                        <div className={'mobile-menu'}>
+                            {/*Links*/}
+                            <hr/>
+                            <div className={'flex flex-col text-center py-4'}>
+                                <a onClick={closeMenu} className={'mob-menu-i'} href={'#about-me'}>Обо мне</a>
+                                <a onClick={closeMenu} className={'mob-menu-i'} href={'#my-services'}>Услуги</a>
+                                <a onClick={closeMenu} className={'mob-menu-i'} href={'#questions'}>Вопросы</a>
+                                <a onClick={closeMenu} className={'mob-menu-i-special'} href={'#signup-form'}>Записаться</a>
+                            </div>
+                            <hr/>
+                            {/*Socials*/}
+                            <div className={'flex flex-col items-center py-4'}>
+                                <div className={'flex flex-row justify-between w-[100px]'}>
+                                    <a className={'social-icon'} href={'#'}>
+                                        <WhatsAppIcon/>
+                                    </a>
+                                    <a className={'social-icon'} href={'#'}>
+                                        <TelegramIcon/>
+                                    </a>
+                                </div>
                             </div>
                         </div>
+                    </CSSTransition>
+                </div>:
+                <div className={'flex flex-row justify-between mx-auto max-w-[92%] lg:max-w-[78%]'}>
+                    {/*Desktop Nav*/}
+                    <div className={'flex flex-row justify-between items-center py-4'}>
+                        {/*Branding*/}
+                        <a href={'#'} className={'flex flex-row items-center ml-6'}>
+                            <BookIcon/>
+                            <p className={'text-2xl font-bold ml-2 font-rbMono select-none'}>Sophia<br/>Tutor</p>
+                        </a>
                     </div>
-                </CSSTransition>
-            </div>
-            {/*Desktop Nav*/}
-            <div>
-
-            </div>
+                    <div>
+                        <div className={'flex flex-row text-center py-4'}>
+                            <a className={'desk-menu-i'} href={'#about-me'}>Обо мне</a>
+                            <a className={'desk-menu-i'} href={'#my-services'}>Услуги</a>
+                            <a className={'desk-menu-i'} href={'#questions'}>Вопросы</a>
+                            <a className={'desk-menu-i-special'} href={'#signup-form'}>Записаться</a>
+                        </div>
+                    </div>
+                </div>
+            }
         </div>
     );
 }
