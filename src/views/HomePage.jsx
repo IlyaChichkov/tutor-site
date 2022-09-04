@@ -33,17 +33,17 @@ function HomePage(props) {
                         <StudyPicture className={'h-[280px] flex-shrink'}/>
                     </div>
                     {/*Welcome Text*/}
-                    <div className={'col-span-2 lg:col-span-1'}>
+                    <div className={'col-span-2 lg:col-span-1 flex flex-col justify-center'}>
                         <p className={'font-rbMono tracking-widest text-xl mb-4'}>София Шуман</p>
                         <h1 className={'mb-4'}>Твой личный помощник в мире выразительного, красивого и могучего русского языка</h1>
                         <h3 className={'mb-4'}>Репетитор русского языка и литературы</h3>
-                        <div className={'flex flex-col md:flex-row items-center  mt-8 mb-12'}>
+                        <div className={'flex flex-col xl:flex-row items-center  mt-8 mb-12'}>
                             <a href={'#signup-form'}>
                                 <button className={'main w-[60%] max-w-[340px] min-w-[290px]'}>Записаться на занятие</button>
                             </a>
-                            <div className={'flex flex-row md:mt-0 mt-8'}>
-                                <ArrowUpIcon className={'md:hidden'}/>
-                                <ArrowLeftIcon  className={'hidden ml-6 md:block'}/>
+                            <div className={'flex flex-row xl:mt-0 mt-8'}>
+                                <ArrowUpIcon className={'xl:hidden'}/>
+                                <ArrowLeftIcon  className={'hidden ml-6 xl:block'}/>
                                 <p className={'ml-2'}>
                                     Пробное занятие <span className={'text-main'}>бесплатно</span>
                                 </p>
@@ -52,7 +52,7 @@ function HomePage(props) {
                     </div>
                     {/*Desktop Person Image*/}
                     <div className={'hidden lg:block'}>
-                        <StudyPicture/>
+                        <StudyPicture className={'lg:max-h-[430px]'}/>
                     </div>
                 </div>
             </section>

@@ -6,6 +6,7 @@ import {ReactComponent as WhatsAppIcon} from '../assets/socials/whatsapp.svg'
 import {ReactComponent as TelegramIcon} from '../assets/socials/telegram.svg'
 import {useDispatch} from "react-redux";
 import {toggleMobile} from "../redux/deviceSlice";
+import {CSSTransition} from "react-transition-group";
 
 const getWidth = () => window.innerWidth
     || document.documentElement.clientWidth
@@ -55,7 +56,10 @@ function Navigation() {
                     </div>
                 </div>
                 {/*Mobile Menu*/}
-                { isMobileMenu?
+                <CSSTransition in={isMobileMenu}
+                               timeout={300}
+                               classNames="item"
+                               unmountOnExit>
                     <div className={'mobile-menu'}>
                         {/*Links*/}
                         <hr/>
@@ -63,21 +67,22 @@ function Navigation() {
                             <a className={'mob-menu-i'} href={'#about-me'}>Обо мне</a>
                             <a className={'mob-menu-i'} href={'#my-services'}>Услуги</a>
                             <a className={'mob-menu-i'} href={'#questions'}>Вопросы</a>
+                            <a className={'mob-menu-i-special'} href={'#signup-form'}>Записаться</a>
                         </div>
                         <hr/>
                         {/*Socials*/}
                         <div className={'flex flex-col items-center py-4'}>
                             <div className={'flex flex-row justify-between w-[100px]'}>
-                                <a href={'#'}>
+                                <a className={'social-icon'} href={'#'}>
                                     <WhatsAppIcon/>
                                 </a>
-                                <a href={'#'}>
+                                <a className={'social-icon'} href={'#'}>
                                     <TelegramIcon/>
                                 </a>
                             </div>
                         </div>
-                    </div>: null
-                }
+                    </div>
+                </CSSTransition>
             </div>
             {/*Desktop Nav*/}
             <div>

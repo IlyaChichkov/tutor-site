@@ -6,7 +6,39 @@
         @apply py-1 my-1 tracking-wider font-raleway font-medium;
     }
 
+    .mob-menu-i-special{
+        @apply py-1 my-1 tracking-wider font-raleway font-medium text-main;
+        &:hover{
+            @apply brightness-150;
+        }
+    }
+
     .mobile-menu{
         @apply absolute flex flex-col justify-center w-full bg-white h-auto;
+
+        .social-icon{
+            &:hover{
+                @apply brightness-125;
+            }
+            &:active{
+                @apply brightness-95;
+            }
+        }
     }
+
+    .item-enter {
+        opacity: 0;
+    }
+    .item-enter-active {
+        opacity: 1;
+        transition: opacity 110ms ease-in;
+    }
+    .item-exit {
+        opacity: 1;
+    }
+    .item-exit-active {
+        opacity: 0;
+        transition: opacity 110ms ease-in;
+    }
+
 }

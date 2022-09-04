@@ -22,6 +22,11 @@ hr{
 
 a{
   @apply no-underline;
+  transition: all 90ms ease-in;
+}
+
+a:hover{
+  @apply text-secondary;
 }
 
 a:visited{
