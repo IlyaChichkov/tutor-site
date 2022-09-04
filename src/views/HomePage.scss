@@ -10,12 +10,15 @@
 
 .page-section{
   @apply my-3;
+  foo: bar;
   &.section-main{
     @apply px-8 md:w-[75%] mx-auto;
+    foo: bar;
   }
 
   .plan-hr{
     @apply my-4 md:hidden;
+    foo: bar;
   }
 
   &.first-section{
