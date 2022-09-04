@@ -1,0 +1,5 @@
+<svg className={'content-center'} width="36" height="38" viewBox="0 0 36 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4.5 11.0833H31.5" stroke="#070B2D" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M4.5 19H31.5" stroke="#070B2D" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M4.5 26.9167H31.5" stroke="#070B2D" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

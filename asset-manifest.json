@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/tutor-site/static/css/main.f592e1bc.css",
+    "main.js": "/tutor-site/static/js/main.a1da994f.js",
+    "static/media/study-picture.svg": "/tutor-site/static/media/study-picture.e33f9292fc6e031344ecd85395c350ca.svg",
+    "static/media/whatsapp.svg": "/tutor-site/static/media/whatsapp.3f1c141e1767b24edd3322771e42cf23.svg",
+    "static/media/telegram.svg": "/tutor-site/static/media/telegram.6cf052a9765055bd3e38bd076a242f32.svg",
+    "static/media/desktop-video-icon.svg": "/tutor-site/static/media/desktop-video-icon.4fb49b1c18f1b52d58feabdee5429756.svg",
+    "static/media/book-icon.svg": "/tutor-site/static/media/book-icon.0ad5462f3991af3e10f85092d09fbc7d.svg",
+    "static/media/plan-icon.svg": "/tutor-site/static/media/plan-icon.ece36432aae071c69d17a74eb10f724a.svg",
+    "index.html": "/tutor-site/index.html",
+    "static/media/clock-icon.svg": "/tutor-site/static/media/clock-icon.b9a65fc94548867de17251e3ec6a2566.svg",
+    "static/media/arrow-up.svg": "/tutor-site/static/media/arrow-up.30ff4bd1a097bf0a991e42ba0c9bc659.svg",
+    "static/media/arrow-left.svg": "/tutor-site/static/media/arrow-left.c3037669b6de3921f8dd17fe2fe1beb2.svg",
+    "static/media/menu-icon.svg": "/tutor-site/static/media/menu-icon.d7316cebafa47b3b9593ed2afc62be38.svg",
+    "static/media/spolier-icon.svg": "/tutor-site/static/media/spolier-icon.5a2a5ffa04c3292e7023dc84c5704eca.svg",
+    "static/media/quote-right.svg": "/tutor-site/static/media/quote-right.29c35730f1b24d7e7752511787f69a13.svg",
+    "static/media/quote-left.svg": "/tutor-site/static/media/quote-left.edf66b9e612702e04d0ab7f789cef4ca.svg",
+    "main.f592e1bc.css.map": "/tutor-site/static/css/main.f592e1bc.css.map",
+    "main.a1da994f.js.map": "/tutor-site/static/js/main.a1da994f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f592e1bc.css",
+    "static/js/main.a1da994f.js"
+  ]
+}
