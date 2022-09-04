@@ -46,3 +46,7 @@ button.main:hover{
 button.main:active{
   @apply opacity-90;
 }
+
+button.main:disabled{
+  @apply opacity-50;
+}

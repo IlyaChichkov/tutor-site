@@ -18,7 +18,7 @@
     }
     .desk-menu-i-special{
         @apply px-4 py-3 h-fit tracking-wider font-raleway font-medium text-main
-        bg-white shadow-md shadow-blue-200 rounded-full mr-3 last:mr-12;
+        bg-white shadow-md shadow-blue-200 rounded-full mr-3 last:mr-6;
         &:hover{
             @apply brightness-105;
         }

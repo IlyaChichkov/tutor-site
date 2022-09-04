@@ -23,7 +23,7 @@ function Navigation() {
     const navClass = isMobile? 'fixed top-0': 'absolute top-[-150px]';
     useEffect(() => {
         const resizeListener = () => {
-            if(getWidth() > 765){
+            if(getWidth() > 859){
                 setMobile(false);
                 dispatch(toggleMobile(false));
             }else{
@@ -98,12 +98,22 @@ function Navigation() {
                             <p className={'text-2xl font-bold ml-2 font-rbMono select-none'}>Sophia<br/>Tutor</p>
                         </a>
                     </div>
-                    <div>
+                    <div className={'flex flex-row'}>
                         <div className={'flex flex-row text-center py-4'}>
                             <a className={'desk-menu-i'} href={'#about-me'}>Обо мне</a>
                             <a className={'desk-menu-i'} href={'#my-services'}>Услуги</a>
                             <a className={'desk-menu-i'} href={'#questions'}>Вопросы</a>
                             <a className={'desk-menu-i-special'} href={'#signup-form'}>Записаться</a>
+                        </div>
+                        <div className={'flex flex-col items-center mt-2 py-4'}>
+                            <div className={'flex flex-row justify-between'}>
+                                <a className={'social-icon mr-4'} href={'#'}>
+                                    <WhatsAppIcon/>
+                                </a>
+                                <a className={'social-icon'} href={'#'}>
+                                    <TelegramIcon/>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
