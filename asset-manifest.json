@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tutor-site/static/css/main.3cac87a1.css",
-    "main.js": "/tutor-site/static/js/main.68291dfa.js",
+    "main.js": "/tutor-site/static/js/main.c15d9a54.js",
     "static/media/study-picture.svg": "/tutor-site/static/media/study-picture.e33f9292fc6e031344ecd85395c350ca.svg",
     "static/media/whatsapp.svg": "/tutor-site/static/media/whatsapp.3f1c141e1767b24edd3322771e42cf23.svg",
     "static/media/telegram.svg": "/tutor-site/static/media/telegram.6cf052a9765055bd3e38bd076a242f32.svg",
@@ -17,10 +17,10 @@
     "static/media/quote-right.svg": "/tutor-site/static/media/quote-right.29c35730f1b24d7e7752511787f69a13.svg",
     "static/media/quote-left.svg": "/tutor-site/static/media/quote-left.edf66b9e612702e04d0ab7f789cef4ca.svg",
     "main.3cac87a1.css.map": "/tutor-site/static/css/main.3cac87a1.css.map",
-    "main.68291dfa.js.map": "/tutor-site/static/js/main.68291dfa.js.map"
+    "main.c15d9a54.js.map": "/tutor-site/static/js/main.c15d9a54.js.map"
   },
   "entrypoints": [
     "static/css/main.3cac87a1.css",
-    "static/js/main.68291dfa.js"
+    "static/js/main.c15d9a54.js"
   ]
 }
