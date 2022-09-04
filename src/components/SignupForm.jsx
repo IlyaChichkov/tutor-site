@@ -4,14 +4,19 @@ import SendForm from "../core/sendFormToBot";
 
 String.prototype.isNumber = function(){return /^\d+$/.test(this);}
 
+const defaultForm = {
+    surname: '',
+    name: '',
+    telephone: '',
+    commissionType: 'ЕГЭ/ОГЭ Литература'
+}
+
 function SignupForm(props) {
-    const [formData, setFormData] = useState({
-        surname: '',
-        name: '',
-        telephone: '',
-        commissionType: 'ЕГЭ/ОГЭ Литература'
-    })
+    const [formData, setFormData] = useState(defaultForm)
     const [isFormVal, setFormVal] = useState(false)
+    const [isWrongTel, setWrongTel] = useState(false)
+
+    const telClass = isWrongTel? 'wrong-input': '';
 
     function SetSurname(val){
         setFormData({...formData, surname: val});
@@ -22,7 +27,7 @@ function SignupForm(props) {
     }
 
     function SetTel(target){
-        if(target.value.isNumber()){
+        if(validatePhone(target.value)){
             setFormData({...formData, telephone: target.value});
         }else{
             setFormData({...formData, telephone: ''});
@@ -46,9 +51,14 @@ function SignupForm(props) {
     }), [formData])
 
     function validatePhone(field) {
-        if (field.match(/^\d{10}/)) {
+        console.log(field)
+        if (field.match(/^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/)) {
+            setWrongTel(false);
             return true;
+        }else{
+            setWrongTel(true);
         }
+        console.log(isWrongTel)
         return false;
     }
 
@@ -57,6 +67,10 @@ function SignupForm(props) {
         validateForm();
         if(isFormVal){
             SendForm(formData);
+            setFormData(defaultForm);
+            e.target[0].value = '';
+            e.target[1].value = '';
+            e.target[2].value = '';
         }
     }
 
@@ -66,27 +80,26 @@ function SignupForm(props) {
             <form onSubmit={handleSubmit} method={'post'} className={'flex flex-col bg-page-white rounded-lg p-4'}>
                 <label>
                     Фамилия
-                    <input onChange={(e) => {SetSurname(e.target.value)}} className={''} type={'text'} placeholder={'Петров'} required/>
+                    <input name={'surname'} onChange={(e) => {SetSurname(e.target.value)}} className={''} type={'text'} placeholder={'Иванов'} required/>
                 </label>
                 <label>
                     Имя
-                    <input onChange={(e) => {SetName(e.target.value)}} className={''} type={'text'} placeholder={'Иван'} required/>
+                    <input name={'name'} onChange={(e) => {SetName(e.target.value)}} className={''} type={'text'} placeholder={'Иван'} required/>
                 </label>
                 <label>
                     Телефон
-                    <input onChange={(e) => {SetTel(e.target)}} className={''} type={'tel'} placeholder={'+7 825 255 25 25'} required/>
+                    <input name={'telephone'} max={12} min={7} onChange={(e) => {SetTel(e.target)}} className={telClass} type={'tel'} placeholder={'+7 525 255 25 25'} required/>
                 </label>
                 <label>
                     Цель
-                    <select onChange={(e) => {SetCommissionType(e.target.value)}}>
+                    <select name={'commission'} onChange={(e) => {SetCommissionType(e.target.value)}}>
                         <option selected>ЕГЭ/ОГЭ Литература</option>
                         <option>ЕГЭ/ОГЭ Русский</option>
                         <option>Помощь с домашней работой/сочинением</option>
                         <option>Помощь иностранцам</option>
                     </select>
                 </label>
-                <div className="g-recaptcha" data-sitekey="6LcviNEhAAAAAI9Q9fW55ShrYERccn6uOO7gV99A"></div>
-                <button data-sitekey={"your_site_key"}  disabled={!isFormVal} type={'submit'} className={'g-recaptcha main mt-3 mb-5'}>Отправить заявку</button>
+                <button disabled={!isFormVal} type={'submit'} className={'g-recaptcha main mt-3 mb-5'}>Отправить заявку</button>
             </form>
         </div>
     );

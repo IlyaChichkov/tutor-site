@@ -26,5 +26,8 @@
     &:focus-visible{
       @apply outline-none;
     }
+    &.wrong-input{
+      @apply border-red-500;
+    }
   }
 }

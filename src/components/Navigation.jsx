@@ -78,10 +78,10 @@ function Navigation() {
                             {/*Socials*/}
                             <div className={'flex flex-col items-center py-4'}>
                                 <div className={'flex flex-row justify-between w-[100px]'}>
-                                    <a className={'social-icon'} href={'#'}>
+                                    <a className={'social-icon'} href={'https://api.whatsapp.com/send/?phone=79269024361'}>
                                         <WhatsAppIcon/>
                                     </a>
-                                    <a className={'social-icon'} href={'#'}>
+                                    <a className={'social-icon'} href={'https://t.me/sofiyanosonya'}>
                                         <TelegramIcon/>
                                     </a>
                                 </div>
