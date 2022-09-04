@@ -107,10 +107,10 @@ function Navigation() {
                         </div>
                         <div className={'flex flex-col items-center mt-2 py-4'}>
                             <div className={'flex flex-row justify-between'}>
-                                <a className={'social-icon mr-4'} href={'#'}>
+                                <a className={'social-icon mr-4'} href={'https://api.whatsapp.com/send/?phone=79269024361'}>
                                     <WhatsAppIcon/>
                                 </a>
-                                <a className={'social-icon'} href={'#'}>
+                                <a className={'social-icon'} href={'https://t.me/sofiyanosonya'}>
                                     <TelegramIcon/>
                                 </a>
                             </div>
