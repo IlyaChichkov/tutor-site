@@ -4,19 +4,21 @@ import {ReactComponent as TelegramIcon} from "../assets/socials/telegram.svg";
 
 function Footer(props) {
     return (
-        <div>
-            <h4>Обратная связь</h4>
-            <div className={'flex flex-col items-center py-4'}>
-                <div className={'flex flex-row justify-between w-[100px]'}>
-                    <a className={'social-icon'} href={'#'}>
-                        <div>
-                            <WhatsAppIcon/>
-                        </div>
-                    </a>
-                    <a className={'social-icon'} href={'#'}>
+        <div className={'max-w-[92%] mx-auto mt-12'}>
+            <h4 className={'font-bold text-lg'}>Обратная связь</h4>
+            <div className={'flex flex-col py-4'}>
+                <a className={'social-icon'} href={'#'}>
+                    <div className={'flex flex-row py-2'}>
+                        <WhatsAppIcon/>
+                        <p className={'font-rb ml-3'}>+7 (926) 902 43 61</p>
+                    </div>
+                </a>
+                <a className={'social-icon mt-0 mb-8'} href={'#'}>
+                    <div className={'flex flex-row py-4'}>
                         <TelegramIcon/>
-                    </a>
-                </div>
+                        <p className={'font-rb ml-3'}>@sofiyanosonya</p>
+                    </div>
+                </a>
             </div>
         </div>
     );
